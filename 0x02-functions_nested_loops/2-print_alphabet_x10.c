@@ -1,13 +1,21 @@
 #include "main.h"
 /**
-* add - return the sum of its parameters
-* @a: int type number
-* @b: int type number
-* Return: 0
+* print_alphabet_x10 -prints the alphabet 10 times in lowercase
+*
+* Return: Always 0 (Success)
 */
-
-
-int add(int a, int b0)
+void print_alphabet_x10(void)
 {
-return (a + b);
+		int alpha;
+		int alpha2;
+
+		for (alpha = 0; alpha <= 9; alpha++)
+		{
+			for (alpha2 = 'a'; alpha2 <= 'z'; alpha2++)
+			{
+				_putchar(alpha2);
+			}
+
+			_putchar('\n');
+		}
 }
