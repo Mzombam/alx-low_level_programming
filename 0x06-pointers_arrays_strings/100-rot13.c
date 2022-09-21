@@ -1,30 +1,25 @@
 #include "main.h"
+
 /**
- *rot13 - encoding a string using rot13.
- *@s: the string to be encoded to rot13.
- *Return: the string s encoded to rot13.
+ * print_number - Prints any integer with putchar
+ * @n: Number to prints
+ *
+ * Return: Nothing
  */
-
-char *rot13(char *s)
-{int i = 0, j = 0;
-
-char string_rot13[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-
-char string_alpha[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-
-while (s[i] != '\0')
+void print_number(int n)
 {
-do {
-if (s[i] == string_alpha[j])
-{
-s[i] = string_rot13[j];
-break;
-}
-j++;
-} while (string_alpha[j] != '\0');
-}
-j = 0;
-i++;
+unsigned int x;
 
-return (s);
+if (n < 0)
+{
+_putchar('-');
+n *= -1;
+}
+
+x = n;
+
+if (x / 10)
+print_number(x / 10);
+
+_putchar(x % 10 + '0');
 }
