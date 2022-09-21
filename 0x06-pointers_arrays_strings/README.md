@@ -1,0 +1,1 @@
+this project is about c point, arrays and strings on c programming
