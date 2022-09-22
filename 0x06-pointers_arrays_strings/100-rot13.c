@@ -1,25 +1,28 @@
 #include "main.h"
-
 /**
- * print_number - Prints any integer with putchar
- * @n: Number to prints
- *
- * Return: Nothing
+ * rot13 - encodes a string using rot13
+ * @s: input string.
+ * Return: the pointer to dest.
  */
-void print_number(int n)
-{
-unsigned int x;
 
-if (n < 0)
+char *rot13(char *s)
 {
-_putchar('-');
-n *= -1;
+int count = 0, i;
+char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+while (*(s + count) != '\0')
+{
+for (i = 0; i < 52; i++)
+{
+if (*(s + count) == alphabet[i])
+{
+*(s + count) = rot13[i];
+break;
+}
+}
+count++;
 }
 
-x = n;
-
-if (x / 10)
-print_number(x / 10);
-
-_putchar(x % 10 + '0');
+return (s);
 }
