@@ -17,5 +17,6 @@ while (current != NULL)
 {
 current = current->next;
 nbr_element++;
+}
 return (nbr_element);
 }
