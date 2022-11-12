@@ -1,0 +1,1 @@
+This is a group project named simple shell which is done by two partners which Mzomba mongikazi and Bliss Nathaniel Samuel.
